@@ -53,15 +53,15 @@ steps:
     echo "Configuring defaults..."
 
     az devops configure --defaults \
-      organization=https://dev.azure.com/akparashar9597 \
-      project=Artifacts-Demo1
+      organization=https://dev.azure.com/ssharaz01001 \
+      project=DevOpsAgent Project
 
     echo "Publishing package..."
 
     az artifacts universal publish \
-      --organization https://dev.azure.com/akparashar9597 \
+      --organization https://dev.azure.com/ssharaz01001 \
       --scope project \
-      --project Artifacts-Demo1 \
+      --project DevOpsAgent Project \
       --feed PythonFeed \
       --name pythonapp \
       --version 1.0.$(Build.BuildId) \
