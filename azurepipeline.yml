@@ -54,14 +54,14 @@ steps:
 
     az devops configure --defaults \
       organization=https://dev.azure.com/ssharaz01001 \
-      project=DevOpsAgent Project
+      project="DevOpsAgent Project"
 
     echo "Publishing package..."
 
     az artifacts universal publish \
       --organization https://dev.azure.com/ssharaz01001 \
       --scope project \
-      --project DevOpsAgent Project \
+      --project "DevOpsAgent Project" \
       --feed PythonFeed \
       --name pythonapp \
       --version 1.0.$(Build.BuildId) \
